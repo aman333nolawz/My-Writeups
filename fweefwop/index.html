@@ -317,6 +317,41 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#reversing-python-1" class="md-nav__link">
+    Reversing Python 1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reversing-python-2" class="md-nav__link">
+    Reversing Python 2
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reversing-python-3" class="md-nav__link">
+    Reversing Python 3
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reversing-python-4" class="md-nav__link">
+    Reversing Python 4
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reversing-python-5" class="md-nav__link">
+    Reversing Python 5
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#reversing-python-7" class="md-nav__link">
     Reversing Python 7
   </a>
@@ -431,6 +466,41 @@
   
     <nav class="md-nav" aria-label="Reversing">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reversing-python-1" class="md-nav__link">
+    Reversing Python 1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reversing-python-2" class="md-nav__link">
+    Reversing Python 2
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reversing-python-3" class="md-nav__link">
+    Reversing Python 3
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reversing-python-4" class="md-nav__link">
+    Reversing Python 4
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reversing-python-5" class="md-nav__link">
+    Reversing Python 5
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#reversing-python-7" class="md-nav__link">
@@ -563,6 +633,126 @@
 <p>Flag: <code>fwopCTF{f1lt3rs_not_good_3n0ugh}</code></p>
 <p>This challenge is just advanced version of the <a href="#sqli">SQLI</a> Challenge. So First I tried the payload on that challenge but it didn't work. So I tried more of them and finally the <code>' || '1'='1</code> as admin and password got me the flag.</p>
 <h2 id="reversing">Reversing<a class="headerlink" href="#reversing" title="Permanent link"></a></h2>
+<h3 id="reversing-python-1">Reversing Python 1<a class="headerlink" href="#reversing-python-1" title="Permanent link"></a></h3>
+<p>Flag: <code>fwopCTF{no_python_required}</code></p>
+<p>Code given with the challenge:
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Enter the flag and I will check it for you.&quot;</span><span class="p">)</span>
+<span class="n">enteredFlag</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
+<span class="k">if</span> <span class="n">enteredFlag</span> <span class="o">==</span> <span class="s2">&quot;fwopCTF</span><span class="si">{no_python_required}</span><span class="s2">&quot;</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Your flag is correct!&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Your flag is incorrect. :(&quot;</span><span class="p">)</span>
+</code></pre></div></p>
+<p>The flag is right there in the <code>if</code> check. You can just submit that as the flag.</p>
+<h3 id="reversing-python-2">Reversing Python 2<a class="headerlink" href="#reversing-python-2" title="Permanent link"></a></h3>
+<p>Flag:  <code>fwopCTF{perhaps_this_is_the_flag}</code></p>
+<p>Code given with the challenge:
+<div class="highlight"><pre><span></span><code><span class="n">var1</span> <span class="o">=</span> <span class="s2">&quot;fwopCTF</span><span class="si">{this_might_be_the_flag}</span><span class="s2">&quot;</span>
+<span class="n">var2</span> <span class="o">=</span> <span class="s2">&quot;fwopCTF</span><span class="si">{this_could_be_the_flag}</span><span class="s2">&quot;</span>
+<span class="n">var3</span> <span class="o">=</span> <span class="s2">&quot;fwopCTF</span><span class="si">{this_potentially_is_the_flag}</span><span class="s2">&quot;</span>
+<span class="n">var4</span> <span class="o">=</span> <span class="s2">&quot;fwopCTF</span><span class="si">{perhaps_this_is_the_flag}</span><span class="s2">&quot;</span>
+<span class="n">var5</span> <span class="o">=</span> <span class="s2">&quot;fwopCTF{could_this_be_the_flag?}&quot;</span>
+<span class="n">var6</span> <span class="o">=</span> <span class="s2">&quot;fwopCTF{this_probably_isn&#39;t_the_flag}&quot;</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Enter the flag and I will check it for you.&quot;</span><span class="p">)</span>
+<span class="n">enteredFlag</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
+<span class="k">if</span> <span class="n">enteredFlag</span> <span class="o">==</span> <span class="n">var4</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Your flag is correct!&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Your flag is incorrect. :(&quot;</span><span class="p">)</span>
+</code></pre></div></p>
+<p>So the <code>if</code> block prints <code>Your flag is correct!</code> when the entered flag is equal to <code>var4</code>. So we can copy the text in <code>var4</code> and submit as the flag.</p>
+<h3 id="reversing-python-3">Reversing Python 3<a class="headerlink" href="#reversing-python-3" title="Permanent link"></a></h3>
+<p>Flag: <code>fwopCTF{see_seesaw_sheshore_see_sheshore_seasells_shells}</code></p>
+<p>Code given with the challenge:
+<div class="highlight"><pre><span></span><code><span class="n">var1</span> <span class="o">=</span> <span class="s2">&quot;fwopCTF</span><span class="si">{sheshore_seasore_shells_seasore_shesore_seashells_seashore}</span><span class="s2">&quot;</span>
+<span class="n">var3</span> <span class="o">=</span> <span class="s2">&quot;fwopCTF</span><span class="si">{sheshore_seashore_seesaw_seesaw_shesore_seasore_seasells}</span><span class="s2">&quot;</span>
+<span class="n">var2</span> <span class="o">=</span> <span class="s2">&quot;fwopCTF</span><span class="si">{shesore_seashells_seashells_seasells_shells_seesaw_seasells}</span><span class="s2">&quot;</span>
+<span class="n">var1</span> <span class="o">=</span> <span class="s2">&quot;fwopCTF</span><span class="si">{seashore_see_seashells_shesore_seesaw_sheshore_shells}</span><span class="s2">&quot;</span>
+<span class="n">var3</span> <span class="o">=</span> <span class="s2">&quot;fwopCTF</span><span class="si">{seashells_shells_seasells_seasells_she_shells_see}</span><span class="s2">&quot;</span>
+<span class="n">var1</span> <span class="o">=</span> <span class="s2">&quot;fwopCTF</span><span class="si">{she_seasells_seashore_seashore_seasore_shells_seashore}</span><span class="s2">&quot;</span>
+<span class="n">var2</span> <span class="o">=</span> <span class="s2">&quot;fwopCTF</span><span class="si">{seasore_shells_shells_seashells_sheshore_she_seasells}</span><span class="s2">&quot;</span>
+<span class="n">var3</span> <span class="o">=</span> <span class="s2">&quot;fwopCTF</span><span class="si">{seasore_seesaw_see_seashore_seashells_seashore_seesaw}</span><span class="s2">&quot;</span>
+<span class="n">var3</span> <span class="o">=</span> <span class="s2">&quot;fwopCTF</span><span class="si">{see_seesaw_sheshore_see_sheshore_seasells_shells}</span><span class="s2">&quot;</span>
+<span class="n">var1</span> <span class="o">=</span> <span class="s2">&quot;fwopCTF</span><span class="si">{seashells_she_seasore_seashore_shesore_shesore_seasells}</span><span class="s2">&quot;</span>
+<span class="n">var2</span> <span class="o">=</span> <span class="s2">&quot;fwopCTF</span><span class="si">{seasells_seashells_shesore_seasore_seasore_sheshore_seasore}</span><span class="s2">&quot;</span>
+<span class="n">var1</span> <span class="o">=</span> <span class="s2">&quot;fwopCTF</span><span class="si">{she_seesaw_she_seashore_seasells_she_seesaw}</span><span class="s2">&quot;</span>
+<span class="n">var1</span> <span class="o">=</span> <span class="s2">&quot;fwopCTF</span><span class="si">{she_seashore_shesore_sheshore_sheshore_seesaw_she}</span><span class="s2">&quot;</span>
+<span class="n">var2</span> <span class="o">=</span> <span class="s2">&quot;fwopCTF</span><span class="si">{seasells_she_seasore_she_seashore_seashore_seashells}</span><span class="s2">&quot;</span>
+<span class="n">var1</span> <span class="o">=</span> <span class="s2">&quot;fwopCTF</span><span class="si">{shesore_see_see_seesaw_sheshore_seashells_seashells}</span><span class="s2">&quot;</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Enter the flag and I will check it for you.&quot;</span><span class="p">)</span>
+<span class="n">enteredFlag</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
+<span class="k">if</span> <span class="n">enteredFlag</span> <span class="o">==</span> <span class="n">var3</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Your flag is correct!&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Your flag is incorrect. :(&quot;</span><span class="p">)</span>
+</code></pre></div></p>
+<p>So in this challenge the <code>if</code> block checks if the entered text is equal to <code>var3</code> And we can see that <code>var3</code> has changed many times in the code. So we can basically just copy the text in the last occurence of <code>var3</code> which is <code>fwopCTF{see_seesaw_sheshore_see_sheshore_seasells_shells}</code> and we can submit that as the flag.</p>
+<h3 id="reversing-python-4">Reversing Python 4<a class="headerlink" href="#reversing-python-4" title="Permanent link"></a></h3>
+<p>Flag: <code>fwopCTF{then_if_then_else_if_if}</code></p>
+<p>Code given with this challenge:
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Enter the flag and I will check it for you.&quot;</span><span class="p">)</span>
+<span class="n">enteredflag</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
+
+<span class="n">var1</span> <span class="o">=</span> <span class="mi">15</span>
+<span class="n">var2</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="n">var3</span> <span class="o">=</span> <span class="mi">9</span>
+
+<span class="k">if</span> <span class="n">var1</span> <span class="o">&lt;</span> <span class="n">var3</span><span class="p">:</span>
+    <span class="n">var2</span> <span class="o">=</span> <span class="n">var1</span> <span class="o">+</span> <span class="n">var3</span>
+<span class="k">elif</span> <span class="n">var3</span> <span class="o">&gt;</span> <span class="n">var2</span><span class="p">:</span>
+    <span class="n">var1</span> <span class="o">=</span> <span class="p">(</span><span class="n">var1</span> <span class="o">*</span> <span class="n">var2</span><span class="p">)</span> <span class="o">-</span> <span class="n">var2</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">var3</span> <span class="o">=</span> <span class="n">var2</span> <span class="o">*</span> <span class="n">var1</span>
+
+<span class="k">if</span> <span class="n">var1</span> <span class="o">-</span> <span class="n">var2</span> <span class="o">*</span> <span class="n">var3</span> <span class="o">&gt;=</span> <span class="mi">10</span><span class="p">:</span>
+    <span class="n">var1</span> <span class="o">=</span> <span class="mi">15</span> <span class="o">-</span> <span class="n">var3</span>
+    <span class="n">var3</span> <span class="o">=</span> <span class="n">var1</span> <span class="o">*</span> <span class="n">var2</span>
+<span class="k">else</span><span class="p">:</span>   
+    <span class="n">var2</span> <span class="o">=</span> <span class="n">var1</span> <span class="o">/</span> <span class="n">var2</span>
+    <span class="n">var3</span> <span class="o">=</span> <span class="n">var3</span> <span class="o">*</span> <span class="mi">2</span>
+
+
+<span class="k">if</span> <span class="n">var1</span> <span class="o">+</span> <span class="n">var2</span> <span class="o">&gt;</span> <span class="n">var3</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">var2</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">!=</span> <span class="n">var1</span><span class="p">:</span>
+        <span class="n">correctflag</span> <span class="o">=</span> <span class="s2">&quot;fwopCTF</span><span class="si">{else_elif_if_elif_else_else}</span><span class="s2">&quot;</span>
+    <span class="k">elif</span> <span class="n">var3</span> <span class="o">-</span> <span class="n">var1</span> <span class="o">&gt;=</span> <span class="n">var2</span> <span class="o">*</span> <span class="n">var2</span><span class="p">:</span>
+        <span class="n">correctflag</span> <span class="o">=</span> <span class="s2">&quot;fwopCTF</span><span class="si">{else_if_then_then_else_elif}</span><span class="s2">&quot;</span>
+    <span class="k">elif</span> <span class="n">var3</span> <span class="o">+</span> <span class="n">var1</span> <span class="o">+</span> <span class="n">var2</span> <span class="o">&lt;=</span> <span class="n">var3</span> <span class="o">+</span> <span class="n">var1</span> <span class="o">*</span> <span class="n">var2</span><span class="p">:</span>
+        <span class="n">correctflag</span> <span class="o">=</span> <span class="s2">&quot;fwopCTF</span><span class="si">{then_else_else_then_if_if}</span><span class="s2">&quot;</span>
+
+<span class="n">var3</span> <span class="o">=</span> <span class="p">(</span><span class="n">var3</span> <span class="o">*</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="n">var1</span> <span class="o">+</span> <span class="n">var2</span>
+
+<span class="k">if</span> <span class="n">var3</span> <span class="o">+</span> <span class="n">var2</span> <span class="o">+</span> <span class="n">var1</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">var3</span> <span class="o">==</span> <span class="n">var2</span> <span class="o">*</span> <span class="o">-</span><span class="mi">2</span><span class="p">:</span>
+        <span class="n">correctflag</span> <span class="o">=</span> <span class="s2">&quot;fwopCTF</span><span class="si">{else_then_if_then_elif_elif}</span><span class="s2">&quot;</span>
+    <span class="k">elif</span> <span class="n">var2</span> <span class="o">*</span> <span class="n">var1</span> <span class="o">-</span> <span class="n">var3</span> <span class="o">==</span> <span class="mi">3</span> <span class="o">*</span> <span class="n">var1</span> <span class="o">+</span> <span class="mi">5</span> <span class="o">*</span> <span class="n">var2</span><span class="p">:</span>
+        <span class="n">correctflag</span> <span class="o">=</span> <span class="s2">&quot;fwopCTF</span><span class="si">{then_if_then_else_if_if}</span><span class="s2">&quot;</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">correctflag</span> <span class="o">=</span> <span class="s2">&quot;fwopCTF</span><span class="si">{elif_if_if_then_elif_elif}</span><span class="s2">&quot;</span>
+
+<span class="k">if</span> <span class="n">enteredflag</span> <span class="o">==</span> <span class="n">correctflag</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Your flag is correct!&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Your flag is incorrect. :(&quot;</span><span class="p">)</span>
+</code></pre></div></p>
+<p>So we can see that there is so many things goin on here. But we can ignore them all and just focus near the <code>if</code> statement. So we can see that if the entered text is equal to <code>correctflag</code> then it print <code>Your flag is correct!</code>. So we can printthe <code>correctflag</code> variable just before the if statement and thus we get the flag <code>fwopCTF{then_if_then_else_if_if}</code> by inputting anything.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># if enteredflag == correctflag:</span>
+<span class="c1">#     print(&quot;Your flag is correct!&quot;)</span>
+<span class="c1"># else:</span>
+<span class="c1">#     print(&quot;Your flag is incorrect. :(&quot;)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">correctflag</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="reversing-python-5">Reversing Python 5<a class="headerlink" href="#reversing-python-5" title="Permanent link"></a></h3>
+<p>Flag: <code>fwopCTF{bonucleicryxriluoxe}</code></p>
+<p>Same trick as <a href="#reversing-python-4">Reversing Python 4</a>. Comment the <code>if</code> statement and then print <code>correctflag</code> and wrap it with <code>fwopCTF{}</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># if enteredFlag == correctflag:</span>
+<span class="c1">#     print(&quot;Your flag is correct!&quot;)</span>
+<span class="c1"># else:</span>
+<span class="c1">#     print(&quot;Your flag is incorrect. :(&quot;)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">correctflag</span><span class="p">)</span>
+</code></pre></div>
 <h3 id="reversing-python-7">Reversing Python 7<a class="headerlink" href="#reversing-python-7" title="Permanent link"></a></h3>
 <p>Flag: <code>its_time_t;qfwopCTF{</code></p>
 <p>Code which we need to reverse:
