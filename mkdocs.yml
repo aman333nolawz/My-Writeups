@@ -22,6 +22,9 @@ theme:
 nav:
   - Fweefwop CTF: fweefwop.md
 
+plugins:
+  - search
+
 markdown_extensions:
   - markdown.extensions.toc:
       slugify: !!python/name:pymdownx.slugs.uslugify
@@ -56,6 +59,7 @@ markdown_extensions:
           options:
             python3: true
       linenums_style: pymdownx-inline
+      guess_lang: true
   - pymdownx.inlinehilite:
       custom_inline:
         - name: math

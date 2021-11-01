@@ -1,5 +1,45 @@
 # Fweefwop CTF Writeup
 
+## General
+
+### Base2
+
+Flag: `11101000`
+
+???+ info "Description"
+    What is 0xe8 in binary? (use 8 bits)
+
+The number given to us is in hex. So we can convert it into binary using python
+```python
+>> f"{0xe8:0b}"
+'11101000'
+```
+
+### Base64 Abridged
+
+Flag: `SSBsb3ZlIENURgo=`
+
+???+ info "Description"
+    What is the result of base64 encoding of "I love CTF"?
+
+We can use the `base64` command for encoding this into base64
+```bash
+echo "I love CTF" | base64
+```
+
+### Hex the way in
+
+Flag: `fwopCTF{back_from_hex}`
+
+???+ info "Description"
+    66 77 6f 70 43 54 46 7b 62 61 63 6b 5f 66 72 6f 6d 5f 68 65 78 7d
+
+If you have played CTFs before you know this is hex. So just decode it. I ran it in bash using the command called `unhex` and got the output `fwopCTF{back_from_hex}`
+
+```bash
+unhex unhex 66 77 6f 70 43 54 46 7b 62 61 63 6b 5f 66 72 6f 6d 5f 68 65 78 7d
+```
+
 ## Crypto
 
 ### Silly Secret Sharing
@@ -129,6 +169,199 @@ This challenge is just advanced version of the [SQLI](#sqli) Challenge. So First
 
 ## Reversing
 
+### Reversing Python 1
+
+Flag: `fwopCTF{no_python_required}`
+
+Code given with the challenge:
+```python
+print("Enter the flag and I will check it for you.")
+enteredFlag = input()
+if enteredFlag == "fwopCTF{no_python_required}":
+    print("Your flag is correct!")
+else:
+    print("Your flag is incorrect. :(")
+```
+
+The flag is right there in the `if` check. You can just submit that as the flag.
+
+### Reversing Python 2
+
+Flag:  `fwopCTF{perhaps_this_is_the_flag}`
+
+Code given with the challenge:
+```python
+var1 = "fwopCTF{this_might_be_the_flag}"
+var2 = "fwopCTF{this_could_be_the_flag}"
+var3 = "fwopCTF{this_potentially_is_the_flag}"
+var4 = "fwopCTF{perhaps_this_is_the_flag}"
+var5 = "fwopCTF{could_this_be_the_flag?}"
+var6 = "fwopCTF{this_probably_isn't_the_flag}"
+
+print("Enter the flag and I will check it for you.")
+enteredFlag = input()
+if enteredFlag == var4:
+    print("Your flag is correct!")
+else:
+    print("Your flag is incorrect. :(")
+```
+
+So the `if` block prints `Your flag is correct!` when the entered flag is equal to `var4`. So we can copy the text in `var4` and submit as the flag.
+
+
+### Reversing Python 3
+
+Flag: `fwopCTF{see_seesaw_sheshore_see_sheshore_seasells_shells}`
+
+Code given with the challenge:
+```python
+var1 = "fwopCTF{sheshore_seasore_shells_seasore_shesore_seashells_seashore}"
+var3 = "fwopCTF{sheshore_seashore_seesaw_seesaw_shesore_seasore_seasells}"
+var2 = "fwopCTF{shesore_seashells_seashells_seasells_shells_seesaw_seasells}"
+var1 = "fwopCTF{seashore_see_seashells_shesore_seesaw_sheshore_shells}"
+var3 = "fwopCTF{seashells_shells_seasells_seasells_she_shells_see}"
+var1 = "fwopCTF{she_seasells_seashore_seashore_seasore_shells_seashore}"
+var2 = "fwopCTF{seasore_shells_shells_seashells_sheshore_she_seasells}"
+var3 = "fwopCTF{seasore_seesaw_see_seashore_seashells_seashore_seesaw}"
+var3 = "fwopCTF{see_seesaw_sheshore_see_sheshore_seasells_shells}"
+var1 = "fwopCTF{seashells_she_seasore_seashore_shesore_shesore_seasells}"
+var2 = "fwopCTF{seasells_seashells_shesore_seasore_seasore_sheshore_seasore}"
+var1 = "fwopCTF{she_seesaw_she_seashore_seasells_she_seesaw}"
+var1 = "fwopCTF{she_seashore_shesore_sheshore_sheshore_seesaw_she}"
+var2 = "fwopCTF{seasells_she_seasore_she_seashore_seashore_seashells}"
+var1 = "fwopCTF{shesore_see_see_seesaw_sheshore_seashells_seashells}"
+
+print("Enter the flag and I will check it for you.")
+enteredFlag = input()
+if enteredFlag == var3:
+    print("Your flag is correct!")
+else:
+    print("Your flag is incorrect. :(")
+```
+
+So in this challenge the `if` block checks if the entered text is equal to `var3` And we can see that `var3` has changed many times in the code. So we can basically just copy the text in the last occurence of `var3` which is `fwopCTF{see_seesaw_sheshore_see_sheshore_seasells_shells}` and we can submit that as the flag.
+
+
+### Reversing Python 4
+
+Flag: `fwopCTF{then_if_then_else_if_if}`
+
+Code given with this challenge:
+```python
+print("Enter the flag and I will check it for you.")
+enteredflag = input()
+
+var1 = 15
+var2 = 4
+var3 = 9
+
+if var1 < var3:
+    var2 = var1 + var3
+elif var3 > var2:
+    var1 = (var1 * var2) - var2
+else:
+    var3 = var2 * var1
+
+if var1 - var2 * var3 >= 10:
+    var1 = 15 - var3
+    var3 = var1 * var2
+else:   
+    var2 = var1 / var2
+    var3 = var3 * 2
+
+
+if var1 + var2 > var3:
+    if var2 + 2 != var1:
+        correctflag = "fwopCTF{else_elif_if_elif_else_else}"
+    elif var3 - var1 >= var2 * var2:
+        correctflag = "fwopCTF{else_if_then_then_else_elif}"
+    elif var3 + var1 + var2 <= var3 + var1 * var2:
+        correctflag = "fwopCTF{then_else_else_then_if_if}"
+
+var3 = (var3 * -1) + var1 + var2
+
+if var3 + var2 + var1 * 2 >= 0:
+    if var3 == var2 * -2:
+        correctflag = "fwopCTF{else_then_if_then_elif_elif}"
+    elif var2 * var1 - var3 == 3 * var1 + 5 * var2:
+        correctflag = "fwopCTF{then_if_then_else_if_if}"
+    else:
+        correctflag = "fwopCTF{elif_if_if_then_elif_elif}"
+
+if enteredflag == correctflag:
+    print("Your flag is correct!")
+else:
+    print("Your flag is incorrect. :(")
+```
+
+So we can see that there is so many things goin on here. But we can ignore them all and just focus near the `if` statement. So we can see that if the entered text is equal to `correctflag` then it print `Your flag is correct!`. So we can printthe `correctflag` variable just before the if statement and thus we get the flag `fwopCTF{then_if_then_else_if_if}` by inputting anything.
+
+```python
+# if enteredflag == correctflag:
+#     print("Your flag is correct!")
+# else:
+#     print("Your flag is incorrect. :(")
+print(correctflag)
+```
+
+
+### Reversing Python 5
+
+Flag: `fwopCTF{bonucleicryxriluoxe}`
+
+Code given with the challenge:
+```python
+print("Enter the flag and I will check it for you.")
+enteredFlag = input()
+correctflag = "deoxyribonucleic_acid"
+correctflag = correctflag[0:4] + correctflag[7:16] + correctflag[5:2:-1]
+correctflag = correctflag[4:-4] + correctflag[3*4:-1] + correctflag[-1:0:-2]
+
+if enteredFlag == correctflag:
+    print("Your flag is correct!")
+else:
+    print("Your flag is incorrect. :(")
+```
+
+Same trick as [Reversing Python 4](#reversing-python-4). Comment the `if` statement and then print `correctflag` and wrap it with `fwopCTF{}`.
+
+```python
+# if enteredFlag == correctflag:
+#     print("Your flag is correct!")
+# else:
+#     print("Your flag is incorrect. :(")
+print(correctflag)
+```
+
+### Reversing Python 6
+
+Flag: `fwopCTF{also_crypto_lol}`
+
+Code given with the challenge:
+```python
+print("Enter the flag and I will check it for you.")
+enteredFlag = input()
+alphabet = "abcdefghijklmnopqrstuvwxyz{}_ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+code = [5, 22, 14, 15, 31, 48, 34, 26, 0, 11, 18, 14, 28, 2, 17, 24, 15, 19, 14, 28, 11, 14, 11, 27]
+correctflag = ""
+for currentNum in code:
+    correctflag = correctflag + alphabet[currentNum]
+
+if enteredFlag == correctflag:
+    print("Your flag is correct!")
+else:
+    print("Your flag is incorrect. :(")
+```
+
+This is also same as [Reversing Python 4](#reversing-python-4) and [Reversing Python 5](#reversing-python-5). Just print the `correctflag`
+
+```python
+# if enteredFlag == correctflag:
+#     print("Your flag is correct!")
+# else:
+#     print("Your flag is incorrect. :(")
+print(correctflag)
+```
 
 ### Reversing Python 7 
 
