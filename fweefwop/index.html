@@ -352,6 +352,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#reversing-python-6" class="md-nav__link">
+    Reversing Python 6
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#reversing-python-7" class="md-nav__link">
     Reversing Python 7
   </a>
@@ -498,6 +505,13 @@
           <li class="md-nav__item">
   <a href="#reversing-python-5" class="md-nav__link">
     Reversing Python 5
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reversing-python-6" class="md-nav__link">
+    Reversing Python 6
   </a>
   
 </li>
@@ -746,7 +760,42 @@
 </code></pre></div>
 <h3 id="reversing-python-5">Reversing Python 5<a class="headerlink" href="#reversing-python-5" title="Permanent link"></a></h3>
 <p>Flag: <code>fwopCTF{bonucleicryxriluoxe}</code></p>
+<p>Code given with the challenge:
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Enter the flag and I will check it for you.&quot;</span><span class="p">)</span>
+<span class="n">enteredFlag</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
+<span class="n">correctflag</span> <span class="o">=</span> <span class="s2">&quot;deoxyribonucleic_acid&quot;</span>
+<span class="n">correctflag</span> <span class="o">=</span> <span class="n">correctflag</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">4</span><span class="p">]</span> <span class="o">+</span> <span class="n">correctflag</span><span class="p">[</span><span class="mi">7</span><span class="p">:</span><span class="mi">16</span><span class="p">]</span> <span class="o">+</span> <span class="n">correctflag</span><span class="p">[</span><span class="mi">5</span><span class="p">:</span><span class="mi">2</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">correctflag</span> <span class="o">=</span> <span class="n">correctflag</span><span class="p">[</span><span class="mi">4</span><span class="p">:</span><span class="o">-</span><span class="mi">4</span><span class="p">]</span> <span class="o">+</span> <span class="n">correctflag</span><span class="p">[</span><span class="mi">3</span><span class="o">*</span><span class="mi">4</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">correctflag</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">:</span><span class="mi">0</span><span class="p">:</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span>
+
+<span class="k">if</span> <span class="n">enteredFlag</span> <span class="o">==</span> <span class="n">correctflag</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Your flag is correct!&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Your flag is incorrect. :(&quot;</span><span class="p">)</span>
+</code></pre></div></p>
 <p>Same trick as <a href="#reversing-python-4">Reversing Python 4</a>. Comment the <code>if</code> statement and then print <code>correctflag</code> and wrap it with <code>fwopCTF{}</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># if enteredFlag == correctflag:</span>
+<span class="c1">#     print(&quot;Your flag is correct!&quot;)</span>
+<span class="c1"># else:</span>
+<span class="c1">#     print(&quot;Your flag is incorrect. :(&quot;)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">correctflag</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="reversing-python-6">Reversing Python 6<a class="headerlink" href="#reversing-python-6" title="Permanent link"></a></h3>
+<p>Flag: <code>fwopCTF{also_crypto_lol}</code></p>
+<p>Code given with the challenge:
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Enter the flag and I will check it for you.&quot;</span><span class="p">)</span>
+<span class="n">enteredFlag</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
+<span class="n">alphabet</span> <span class="o">=</span> <span class="s2">&quot;abcdefghijklmnopqrstuvwxyz</span><span class="si">{}</span><span class="s2">_ABCDEFGHIJKLMNOPQRSTUVWXYZ&quot;</span>
+<span class="n">code</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">48</span><span class="p">,</span> <span class="mi">34</span><span class="p">,</span> <span class="mi">26</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">24</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">27</span><span class="p">]</span>
+<span class="n">correctflag</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+<span class="k">for</span> <span class="n">currentNum</span> <span class="ow">in</span> <span class="n">code</span><span class="p">:</span>
+    <span class="n">correctflag</span> <span class="o">=</span> <span class="n">correctflag</span> <span class="o">+</span> <span class="n">alphabet</span><span class="p">[</span><span class="n">currentNum</span><span class="p">]</span>
+
+<span class="k">if</span> <span class="n">enteredFlag</span> <span class="o">==</span> <span class="n">correctflag</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Your flag is correct!&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Your flag is incorrect. :(&quot;</span><span class="p">)</span>
+</code></pre></div></p>
+<p>This is also same as <a href="#reversing-python-4">Reversing Python 4</a> and <a href="#reversing-python-5">Reversing Python 5</a>. Just print the <code>correctflag</code></p>
 <div class="highlight"><pre><span></span><code><span class="c1"># if enteredFlag == correctflag:</span>
 <span class="c1">#     print(&quot;Your flag is correct!&quot;)</span>
 <span class="c1"># else:</span>
