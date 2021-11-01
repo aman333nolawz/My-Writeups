@@ -248,6 +248,40 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#general" class="md-nav__link">
+    General
+  </a>
+  
+    <nav class="md-nav" aria-label="General">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#base2" class="md-nav__link">
+    Base2
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#base64-abridged" class="md-nav__link">
+    Base64 Abridged
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hex-the-way-in" class="md-nav__link">
+    Hex the way in
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#crypto" class="md-nav__link">
     Crypto
   </a>
@@ -406,6 +440,40 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#general" class="md-nav__link">
+    General
+  </a>
+  
+    <nav class="md-nav" aria-label="General">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#base2" class="md-nav__link">
+    Base2
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#base64-abridged" class="md-nav__link">
+    Base64 Abridged
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hex-the-way-in" class="md-nav__link">
+    Hex the way in
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#crypto" class="md-nav__link">
     Crypto
   </a>
@@ -542,9 +610,32 @@
                 
                 
                 <h1 id="fweefwop-ctf-writeup">Fweefwop CTF Writeup<a class="headerlink" href="#fweefwop-ctf-writeup" title="Permanent link"></a></h1>
+<h2 id="general">General<a class="headerlink" href="#general" title="Permanent link"></a></h2>
+<h3 id="base2">Base2<a class="headerlink" href="#base2" title="Permanent link"></a></h3>
+<p>Flag: <code class="highlight"><span class="mf">11101000</span></code></p>
+<details class="info" open="open"><summary>Description</summary><p>What is 0xe8 in binary? (use 8 bits)</p>
+</details>
+<p>The number given to us is in hex. So we can convert it into binary using python
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="mh">0xe8</span><span class="si">:</span><span class="s2">0b</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="s1">&#39;11101000&#39;</span>
+</code></pre></div></p>
+<h3 id="base64-abridged">Base64 Abridged<a class="headerlink" href="#base64-abridged" title="Permanent link"></a></h3>
+<p>Flag: <code class="highlight">SSBsb3ZlIENURgo=</code></p>
+<details class="info" open="open"><summary>Description</summary><p>What is the result of base64 encoding of "I love CTF"?</p>
+</details>
+<p>We can use the <code class="highlight">base64</code> command for encoding this into base64
+<div class="highlight"><pre><span></span><code><span class="nb">echo</span> <span class="s2">&quot;I love CTF&quot;</span> <span class="p">|</span> base64
+</code></pre></div></p>
+<h3 id="hex-the-way-in">Hex the way in<a class="headerlink" href="#hex-the-way-in" title="Permanent link"></a></h3>
+<p>Flag: <code class="highlight">fwopCTF{back_from_hex}</code></p>
+<details class="info" open="open"><summary>Description</summary><p>66 77 6f 70 43 54 46 7b 62 61 63 6b 5f 66 72 6f 6d 5f 68 65 78 7d</p>
+</details>
+<p>If you have played CTFs before you know this is hex. So just decode it. I ran it in bash using the command called <code class="highlight">unhex</code> and got the output <code class="highlight">fwopCTF{back_from_hex}</code></p>
+<div class="highlight"><pre><span></span><code>unhex unhex <span class="m">66</span> <span class="m">77</span> 6f <span class="m">70</span> <span class="m">43</span> <span class="m">54</span> <span class="m">46</span> 7b <span class="m">62</span> <span class="m">61</span> <span class="m">63</span> 6b 5f <span class="m">66</span> <span class="m">72</span> 6f 6d 5f <span class="m">68</span> <span class="m">65</span> <span class="m">78</span> 7d
+</code></pre></div>
 <h2 id="crypto">Crypto<a class="headerlink" href="#crypto" title="Permanent link"></a></h2>
 <h3 id="silly-secret-sharing">Silly Secret Sharing<a class="headerlink" href="#silly-secret-sharing" title="Permanent link"></a></h3>
-<p>Flag: <code>84333</code></p>
+<p>Flag: <code class="highlight"><span class="mf">84333</span></code></p>
 <p>For this challenge I read a article in wikipedia and took a code from there, and then modified the code a bit and ran it. And tada! you get the flag!</p>
 <p><a href="https://en.wikipedia.org/wiki/Shamir%27s_Secret_Sharing">Wikipedia article on Shamir's Secret Sharing</a></p>
 <p>Here's the code:
@@ -616,8 +707,8 @@
 <span class="nb">print</span><span class="p">(</span><span class="n">recover_secret</span><span class="p">(</span><span class="n">shares</span><span class="p">))</span>
 </code></pre></div></p>
 <h3 id="open-secret">Open Secret<a class="headerlink" href="#open-secret" title="Permanent link"></a></h3>
-<p>Flag: <code>fwopCTF{I_found_the_alien_his_name_is_paul}</code></p>
-<p>So first I read <a href="https://en.wikipedia.org/wiki/Diffie%E2%80%93Hellman_key_exchange">this</a> article on Wikipedia about Diffie Hellman Key exchange. Then I calculated <code>s</code> and xored base64 decoded flag with the key as bytes represantation of <code>s</code>.</p>
+<p>Flag: <code class="highlight">fwopCTF{I_found_the_alien_his_name_is_paul}</code></p>
+<p>So first I read <a href="https://en.wikipedia.org/wiki/Diffie%E2%80%93Hellman_key_exchange">this</a> article on Wikipedia about Diffie Hellman Key exchange. Then I calculated <code class="highlight">s</code> and xored base64 decoded flag with the key as bytes represantation of <code class="highlight">s</code>.</p>
 <p>Here's the code:
 <div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">Crypto.Util.number</span> <span class="kn">import</span> <span class="n">long_to_bytes</span>                                                                                       
 <span class="kn">import</span> <span class="nn">base64</span>                                                                                                       
@@ -635,20 +726,20 @@
 <span class="nb">print</span><span class="p">(</span><span class="n">xor</span><span class="p">(</span><span class="n">base64</span><span class="o">.</span><span class="n">b64decode</span><span class="p">(</span><span class="n">flag</span><span class="p">),</span> <span class="n">long_to_bytes</span><span class="p">(</span><span class="n">s</span><span class="p">)))</span>
 </code></pre></div></p>
 <h3 id="pretty-safe-password">Pretty Safe Password<a class="headerlink" href="#pretty-safe-password" title="Permanent link"></a></h3>
-<p>Flag: <code>fwopCTF{pa55word}</code></p>
-<p>For this challenge I wrapped all of the passwords with <code>fwopCTF{}</code> in sublime text. Then I ran John the ripper on the hash using the following command:
+<p>Flag: <code class="highlight">fwopCTF{pa55word}</code></p>
+<p>For this challenge I wrapped all of the passwords with <code class="highlight">fwopCTF{}</code> in sublime text. Then I ran John the ripper on the hash using the following command:
 <div class="highlight"><pre><span></span><code>$ john hash.txt --wordlist<span class="o">=</span>10k-most-common.txt --format<span class="o">=</span>Raw-MD5
 </code></pre></div></p>
 <h2 id="web">Web<a class="headerlink" href="#web" title="Permanent link"></a></h2>
 <h3 id="sqli">SQLI<a class="headerlink" href="#sqli" title="Permanent link"></a></h3>
-<p>Flag: <code>fwopCTF{Leaked_data_123}</code></p>
-<p>This challenge was just a basic SQL injection. I got the flag by just passing <code>' OR 1=1 --</code> as both password and username.</p>
+<p>Flag: <code class="highlight">fwopCTF{Leaked_data_123}</code></p>
+<p>This challenge was just a basic SQL injection. I got the flag by just passing <code class="highlight">&#39; OR 1=1 --</code> as both password and username.</p>
 <h3 id="sqli-but-filtered">SQLI But Filtered?<a class="headerlink" href="#sqli-but-filtered" title="Permanent link"></a></h3>
-<p>Flag: <code>fwopCTF{f1lt3rs_not_good_3n0ugh}</code></p>
-<p>This challenge is just advanced version of the <a href="#sqli">SQLI</a> Challenge. So First I tried the payload on that challenge but it didn't work. So I tried more of them and finally the <code>' || '1'='1</code> as admin and password got me the flag.</p>
+<p>Flag: <code class="highlight">fwopCTF{f1lt3rs_not_good_3n0ugh}</code></p>
+<p>This challenge is just advanced version of the <a href="#sqli">SQLI</a> Challenge. So First I tried the payload on that challenge but it didn't work. So I tried more of them and finally the <code class="highlight">&#39; || &#39;1&#39;=&#39;1</code> as admin and password got me the flag.</p>
 <h2 id="reversing">Reversing<a class="headerlink" href="#reversing" title="Permanent link"></a></h2>
 <h3 id="reversing-python-1">Reversing Python 1<a class="headerlink" href="#reversing-python-1" title="Permanent link"></a></h3>
-<p>Flag: <code>fwopCTF{no_python_required}</code></p>
+<p>Flag: <code class="highlight">fwopCTF{no_python_required}</code></p>
 <p>Code given with the challenge:
 <div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Enter the flag and I will check it for you.&quot;</span><span class="p">)</span>
 <span class="n">enteredFlag</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
@@ -657,9 +748,9 @@
 <span class="k">else</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Your flag is incorrect. :(&quot;</span><span class="p">)</span>
 </code></pre></div></p>
-<p>The flag is right there in the <code>if</code> check. You can just submit that as the flag.</p>
+<p>The flag is right there in the <code class="highlight"><span class="k">if</span></code> check. You can just submit that as the flag.</p>
 <h3 id="reversing-python-2">Reversing Python 2<a class="headerlink" href="#reversing-python-2" title="Permanent link"></a></h3>
-<p>Flag:  <code>fwopCTF{perhaps_this_is_the_flag}</code></p>
+<p>Flag:  <code class="highlight">fwopCTF{perhaps_this_is_the_flag}</code></p>
 <p>Code given with the challenge:
 <div class="highlight"><pre><span></span><code><span class="n">var1</span> <span class="o">=</span> <span class="s2">&quot;fwopCTF</span><span class="si">{this_might_be_the_flag}</span><span class="s2">&quot;</span>
 <span class="n">var2</span> <span class="o">=</span> <span class="s2">&quot;fwopCTF</span><span class="si">{this_could_be_the_flag}</span><span class="s2">&quot;</span>
@@ -675,9 +766,9 @@
 <span class="k">else</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Your flag is incorrect. :(&quot;</span><span class="p">)</span>
 </code></pre></div></p>
-<p>So the <code>if</code> block prints <code>Your flag is correct!</code> when the entered flag is equal to <code>var4</code>. So we can copy the text in <code>var4</code> and submit as the flag.</p>
+<p>So the <code class="highlight"><span class="k">if</span></code> block prints <code class="highlight">Your flag is correct!</code> when the entered flag is equal to <code class="highlight"><span class="n">var4</span></code>. So we can copy the text in <code class="highlight"><span class="n">var4</span></code> and submit as the flag.</p>
 <h3 id="reversing-python-3">Reversing Python 3<a class="headerlink" href="#reversing-python-3" title="Permanent link"></a></h3>
-<p>Flag: <code>fwopCTF{see_seesaw_sheshore_see_sheshore_seasells_shells}</code></p>
+<p>Flag: <code class="highlight">fwopCTF{see_seesaw_sheshore_see_sheshore_seasells_shells}</code></p>
 <p>Code given with the challenge:
 <div class="highlight"><pre><span></span><code><span class="n">var1</span> <span class="o">=</span> <span class="s2">&quot;fwopCTF</span><span class="si">{sheshore_seasore_shells_seasore_shesore_seashells_seashore}</span><span class="s2">&quot;</span>
 <span class="n">var3</span> <span class="o">=</span> <span class="s2">&quot;fwopCTF</span><span class="si">{sheshore_seashore_seesaw_seesaw_shesore_seasore_seasells}</span><span class="s2">&quot;</span>
@@ -702,9 +793,9 @@
 <span class="k">else</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Your flag is incorrect. :(&quot;</span><span class="p">)</span>
 </code></pre></div></p>
-<p>So in this challenge the <code>if</code> block checks if the entered text is equal to <code>var3</code> And we can see that <code>var3</code> has changed many times in the code. So we can basically just copy the text in the last occurence of <code>var3</code> which is <code>fwopCTF{see_seesaw_sheshore_see_sheshore_seasells_shells}</code> and we can submit that as the flag.</p>
+<p>So in this challenge the <code class="highlight"><span class="k">if</span></code> block checks if the entered text is equal to <code class="highlight"><span class="n">var3</span></code> And we can see that <code class="highlight"><span class="n">var3</span></code> has changed many times in the code. So we can basically just copy the text in the last occurence of <code class="highlight"><span class="n">var3</span></code> which is <code class="highlight">fwopCTF{see_seesaw_sheshore_see_sheshore_seasells_shells}</code> and we can submit that as the flag.</p>
 <h3 id="reversing-python-4">Reversing Python 4<a class="headerlink" href="#reversing-python-4" title="Permanent link"></a></h3>
-<p>Flag: <code>fwopCTF{then_if_then_else_if_if}</code></p>
+<p>Flag: <code class="highlight">fwopCTF{then_if_then_else_if_if}</code></p>
 <p>Code given with this challenge:
 <div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Enter the flag and I will check it for you.&quot;</span><span class="p">)</span>
 <span class="n">enteredflag</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
@@ -751,7 +842,7 @@
 <span class="k">else</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Your flag is incorrect. :(&quot;</span><span class="p">)</span>
 </code></pre></div></p>
-<p>So we can see that there is so many things goin on here. But we can ignore them all and just focus near the <code>if</code> statement. So we can see that if the entered text is equal to <code>correctflag</code> then it print <code>Your flag is correct!</code>. So we can printthe <code>correctflag</code> variable just before the if statement and thus we get the flag <code>fwopCTF{then_if_then_else_if_if}</code> by inputting anything.</p>
+<p>So we can see that there is so many things goin on here. But we can ignore them all and just focus near the <code class="highlight"><span class="k">if</span></code> statement. So we can see that if the entered text is equal to <code class="highlight">correctflag</code> then it print <code class="highlight">Your flag is correct!</code>. So we can printthe <code class="highlight">correctflag</code> variable just before the if statement and thus we get the flag <code class="highlight">fwopCTF{then_if_then_else_if_if}</code> by inputting anything.</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># if enteredflag == correctflag:</span>
 <span class="c1">#     print(&quot;Your flag is correct!&quot;)</span>
 <span class="c1"># else:</span>
@@ -759,7 +850,7 @@
 <span class="nb">print</span><span class="p">(</span><span class="n">correctflag</span><span class="p">)</span>
 </code></pre></div>
 <h3 id="reversing-python-5">Reversing Python 5<a class="headerlink" href="#reversing-python-5" title="Permanent link"></a></h3>
-<p>Flag: <code>fwopCTF{bonucleicryxriluoxe}</code></p>
+<p>Flag: <code class="highlight">fwopCTF{bonucleicryxriluoxe}</code></p>
 <p>Code given with the challenge:
 <div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Enter the flag and I will check it for you.&quot;</span><span class="p">)</span>
 <span class="n">enteredFlag</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
@@ -772,7 +863,7 @@
 <span class="k">else</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Your flag is incorrect. :(&quot;</span><span class="p">)</span>
 </code></pre></div></p>
-<p>Same trick as <a href="#reversing-python-4">Reversing Python 4</a>. Comment the <code>if</code> statement and then print <code>correctflag</code> and wrap it with <code>fwopCTF{}</code>.</p>
+<p>Same trick as <a href="#reversing-python-4">Reversing Python 4</a>. Comment the <code class="highlight"><span class="k">if</span></code> statement and then print <code class="highlight">correctflag</code> and wrap it with <code class="highlight">fwopCTF{}</code>.</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># if enteredFlag == correctflag:</span>
 <span class="c1">#     print(&quot;Your flag is correct!&quot;)</span>
 <span class="c1"># else:</span>
@@ -780,7 +871,7 @@
 <span class="nb">print</span><span class="p">(</span><span class="n">correctflag</span><span class="p">)</span>
 </code></pre></div>
 <h3 id="reversing-python-6">Reversing Python 6<a class="headerlink" href="#reversing-python-6" title="Permanent link"></a></h3>
-<p>Flag: <code>fwopCTF{also_crypto_lol}</code></p>
+<p>Flag: <code class="highlight">fwopCTF{also_crypto_lol}</code></p>
 <p>Code given with the challenge:
 <div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Enter the flag and I will check it for you.&quot;</span><span class="p">)</span>
 <span class="n">enteredFlag</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
@@ -795,7 +886,7 @@
 <span class="k">else</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Your flag is incorrect. :(&quot;</span><span class="p">)</span>
 </code></pre></div></p>
-<p>This is also same as <a href="#reversing-python-4">Reversing Python 4</a> and <a href="#reversing-python-5">Reversing Python 5</a>. Just print the <code>correctflag</code></p>
+<p>This is also same as <a href="#reversing-python-4">Reversing Python 4</a> and <a href="#reversing-python-5">Reversing Python 5</a>. Just print the <code class="highlight">correctflag</code></p>
 <div class="highlight"><pre><span></span><code><span class="c1"># if enteredFlag == correctflag:</span>
 <span class="c1">#     print(&quot;Your flag is correct!&quot;)</span>
 <span class="c1"># else:</span>
@@ -803,7 +894,7 @@
 <span class="nb">print</span><span class="p">(</span><span class="n">correctflag</span><span class="p">)</span>
 </code></pre></div>
 <h3 id="reversing-python-7">Reversing Python 7<a class="headerlink" href="#reversing-python-7" title="Permanent link"></a></h3>
-<p>Flag: <code>its_time_t;qfwopCTF{</code></p>
+<p>Flag: <code class="highlight">its_time_t;qfwopCTF{</code></p>
 <p>Code which we need to reverse:
 <div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Enter the flag and I will check it for you.&quot;</span><span class="p">)</span>
 <span class="n">enteredFlag</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
@@ -828,7 +919,7 @@
     <span class="k">else</span><span class="p">:</span>
         <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Your flag is incorrect. :(&quot;</span><span class="p">)</span>
 </code></pre></div></p>
-<p>So first of all we can see the that they are adding <code>o_dddduel}</code> to the flag. So the first part of the flag will be <code>fwopCTF{its_time_t</code>. Then we can see that it removes the semi colon from the entered input. so we can add that and now the flag will look lik <code>fwopCTF{its_time_;</code>. And if let's take a look at the for loop. We can see that it will break if the letter <code>q</code> is occured. So we now can add that also, and the flag will be <code>fwopCTF{its_time_;q</code>. and the final step is to shuffle them. So to reverse that we can use string splicing in python. Using the python code <code>flag[8:]+flag[:8]</code> we can see that the flag will be <code>its_time_t;qfwopCTF{</code> and that's it we got the flag!</p>
+<p>So first of all we can see the that they are adding <code class="highlight">o_dddduel}</code> to the flag. So the first part of the flag will be <code class="highlight">fwopCTF{its_time_t</code>. Then we can see that it removes the semi colon from the entered input. so we can add that and now the flag will look lik <code class="highlight">fwopCTF{its_time_;</code>. And if let's take a look at the for loop. We can see that it will break if the letter <code class="highlight">q</code> is occured. So we now can add that also, and the flag will be <code class="highlight">fwopCTF{its_time_;q</code>. and the final step is to shuffle them. So to reverse that we can use string splicing in python. Using the python code <code class="highlight">flag[8:]+flag[:8]</code> we can see that the flag will be <code class="highlight">its_time_t;qfwopCTF{</code> and that's it we got the flag!</p>
 <p>Here's the code for that:
 <div class="highlight"><pre><span></span><code><span class="c1"># The flag checked in the if statement</span>
 <span class="n">flag</span> <span class="o">=</span> <span class="s2">&quot;fwopCTF</span><span class="si">{its_time_to_dddduel}</span><span class="s2">&quot;</span>
