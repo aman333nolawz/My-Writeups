@@ -40,6 +40,20 @@ If you have played CTFs before you know this is hex. So just decode it. I ran it
 unhex unhex 66 77 6f 70 43 54 46 7b 62 61 63 6b 5f 66 72 6f 6d 5f 68 65 78 7d
 ```
 
+### Touch the base 
+
+Flag: `fwopCTF{base64_is_everywhere}`
+
+???+ info "Description"
+    ZndvcENURntiYXNlNjRfaXNfZXZlcnl3aGVyZX0=
+
+That is clearly base64. We can use the same tool used in [Base64 Abridged](#base64-abridged). To decode the base64 we will need to add a `-d` flag at the end of that tool. And if we run it then we will get the flag `fwopCTF{base64_is_everywhere}`.
+
+```bash
+echo "ZndvcENURntiYXNlNjRfaXNfZXZlcnl3aGVyZX0=" | base64 -d
+```
+
+
 ## Crypto
 
 ### Silly Secret Sharing
