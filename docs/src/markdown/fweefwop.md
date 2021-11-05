@@ -37,7 +37,7 @@ Flag: `fwopCTF{back_from_hex}`
 If you have played CTFs before you know this is hex. So just decode it. I ran it in bash using the command called `unhex` and got the output `fwopCTF{back_from_hex}`
 
 ```bash
-unhex unhex 66 77 6f 70 43 54 46 7b 62 61 63 6b 5f 66 72 6f 6d 5f 68 65 78 7d
+unhex 66 77 6f 70 43 54 46 7b 62 61 63 6b 5f 66 72 6f 6d 5f 68 65 78 7d
 ```
 
 ### Touch the base 

@@ -20,7 +20,9 @@ theme:
     - navigation.tabs
 
 nav:
+  - Home: index.md
   - Fweefwop CTF: fweefwop.md
+  - Tools and Commands: tools and commands.md
 
 plugins:
   - search
