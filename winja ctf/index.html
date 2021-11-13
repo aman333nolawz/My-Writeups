@@ -314,6 +314,33 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#cryptography" class="md-nav__link">
+    Cryptography
+  </a>
+  
+    <nav class="md-nav" aria-label="Cryptography">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#believe-your-eyes" class="md-nav__link">
+    Believe Your Eyes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hardy" class="md-nav__link">
+    Hardy
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#forensics" class="md-nav__link">
     Forensics
   </a>
@@ -384,6 +411,33 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#cryptography" class="md-nav__link">
+    Cryptography
+  </a>
+  
+    <nav class="md-nav" aria-label="Cryptography">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#believe-your-eyes" class="md-nav__link">
+    Believe Your Eyes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hardy" class="md-nav__link">
+    Hardy
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#forensics" class="md-nav__link">
     Forensics
   </a>
@@ -417,6 +471,23 @@
                 
                 
                 <h1 id="winja-ctf-writeup">Winja CTF Writeup<a class="headerlink" href="#winja-ctf-writeup" title="Permanent link"></a></h1>
+<h2 id="cryptography">Cryptography<a class="headerlink" href="#cryptography" title="Permanent link"></a></h2>
+<h3 id="believe-your-eyes">Believe Your Eyes<a class="headerlink" href="#believe-your-eyes" title="Permanent link"></a></h3>
+<p>Flag: <code class="highlight">flag{849d97fa58871dad4, _SHOULd_BELIeve-7HeM}</code></p>
+<p>In the site for the challenge, I found this image:
+<img alt="Image for the challenge" src="../assets/images/winja%20ctf/believe_your_eyes.jpg" /></p>
+<p>So I ran some basic tools like <code class="highlight">strings</code> and <code class="highlight"><span class="n">exiftool</span></code>. When I inspected results got from the <code class="highlight"><span class="n">exiftool</span></code> I found the flag.</p>
+<h3 id="hardy">Hardy<a class="headerlink" href="#hardy" title="Permanent link"></a></h3>
+<p>Flag: <code class="highlight">flag{Di77icu8tyI9now@!!#-Youdidit!!}</code></p>
+<p><a href="../assets/files/winja%20ctf/hardy.txt">Encoded</a> text given with the challenge</p>
+<p>This one was not so hard. It was just ciphers inside ciphers. Here is the order of the ciphers:</p>
+<ol>
+<li>Base58</li>
+<li>Morse Code</li>
+<li>Binary</li>
+<li>Decimal to ASCII</li>
+</ol>
+<p>And <a href="https://tinyurl.com/3kweb4vx">here</a> is the process in cyberchef.</p>
 <h2 id="forensics">Forensics<a class="headerlink" href="#forensics" title="Permanent link"></a></h2>
 <h3 id="anonymous">Anonymous<a class="headerlink" href="#anonymous" title="Permanent link"></a></h3>
 <p>Flag: <code class="highlight">flag{LJryyYW8IbxuZrOcZ4nd-this-is-a-challenge}</code></p>
