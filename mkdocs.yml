@@ -16,12 +16,17 @@ theme:
   font:
     text: Roboto
     code: Fira Code Medium
+
   features:
     - navigation.tabs
+    - navigation.top
+    - navigation.instant
 
 nav:
   - Home: index.md
-  - Fweefwop CTF: fweefwop.md
+  - CTFs:
+    - Fweefwop CTF: fweefwop.md
+    - Winja CTF: winja ctf.md
   - Tools and Commands: tools and commands.md
 
 plugins:
@@ -44,9 +49,6 @@ markdown_extensions:
   - pymdownx.superfences:
       preserve_tabs: true
       custom_fences:
-        - name: mermaid
-          class: mermaid
-          format: !!python/name:pymdownx.superfences.fence_code_format
         - name: math
           class: arithmatex
           format: !!python/name:pymdownx.arithmatex.fence_mathjax_format
@@ -73,7 +75,7 @@ markdown_extensions:
       social_url_shorthand: true
       social_url_shortener: true
       user: aman333nolawz
-      repo: pymdown-extensions
+      repo: My-Writeups
       normalize_issue_symbols: true
   - pymdownx.tilde:
   - pymdownx.caret:
