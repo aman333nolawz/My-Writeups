@@ -174,27 +174,19 @@
         
   
   
-
-
-  <li class="md-tabs__item">
-    <a href="../fweefwop/" class="md-tabs__link">
-      Fweefwop CTF
-    </a>
-  </li>
-
-      
-        
-  
-  
     
   
 
 
-  <li class="md-tabs__item">
-    <a href="./" class="md-tabs__link md-tabs__link--active">
-      Winja CTF
-    </a>
-  </li>
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../fweefwop/" class="md-tabs__link md-tabs__link--active">
+        CTFs
+      </a>
+    </li>
+  
 
       
         
@@ -262,6 +254,34 @@
 
   
   
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          CTFs
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="CTFs" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          CTFs
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
   
     <li class="md-nav__item">
       <a href="../fweefwop/" class="md-nav__link">
@@ -270,11 +290,10 @@
     </li>
   
 
-    
-      
-      
-      
-
+            
+          
+            
+              
   
   
     
@@ -319,6 +338,26 @@
   </a>
   
     <nav class="md-nav" aria-label="Cryptography">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#esoteric" class="md-nav__link">
+    Esoteric
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#steganography" class="md-nav__link">
+    Steganography
+  </a>
+  
+    <nav class="md-nav" aria-label="Steganography">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -387,6 +426,13 @@
     </li>
   
 
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
     
       
       
@@ -436,6 +482,26 @@
   </a>
   
     <nav class="md-nav" aria-label="Cryptography">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#esoteric" class="md-nav__link">
+    Esoteric
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#steganography" class="md-nav__link">
+    Steganography
+  </a>
+  
+    <nav class="md-nav" aria-label="Steganography">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -512,6 +578,13 @@
                 
                 <h1 id="winja-ctf-writeup">Winja CTF Writeup<a class="headerlink" href="#winja-ctf-writeup" title="Permanent link"></a></h1>
 <h2 id="cryptography">Cryptography<a class="headerlink" href="#cryptography" title="Permanent link"></a></h2>
+<h3 id="esoteric">Esoteric<a class="headerlink" href="#esoteric" title="Permanent link"></a></h3>
+<p>Flag: <code class="highlight"><span class="n">flag</span><span class="err">{</span><span class="n">es2o</span><span class="nv">@t</span><span class="err">$</span><span class="n">e4r</span><span class="o">&amp;</span><span class="n">i#c_code</span><span class="o">-</span><span class="n">most_difficult_to_program</span><span class="err">}</span><span class="w"></span></code></p>
+<p>We were given with the text
+<div class="highlight"><pre><span></span><code>D&#39;`A^?]nIYXWE16Tvus1NpL-KlIH&quot;hgDB{SRba=<span class="err">&lt;</span>)sxqYonsrqj0hPlkdcb(`Hd]#a`_A@VzZY;Qu87MqQP2HlLEiCHG@EDCBA:^!=6543Wx654-Q1qpM&#39;<span class="ni">&amp;+*#G&#39;&amp;}|#z@~}_uts9ZYutslqpi/mlNMiha&#39;_d]ba`_^W{[TYXWVOTSLp32HGLKDhBAF?&gt;b%A:?87[543870T.-2+0)Mnm+</span><span class="nv">$H</span><span class="ni">(hg%</span><span class="cp">${</span><span class="n">zy</span><span class="err">?</span><span class="cp">}</span><span class="ni">_{t:rq7otmrkj0ngledc)JIedcb[!B^]\UyYXWVU7Mqp3INMLEJCgGFE&#39;=</span><span class="nt">&lt;A</span><span class="err">@?8\&lt;;4z2V6/4-Q10po&#39;&amp;%I)(&#39;g%|{&quot;!x</span><span class="nt">&gt;</span><span class="ni">|{zsxwp6tmrqpi/POkjib(fe^F\&quot;`Y^W{&gt;=YXQu8TMLQPOHlLEJCBAeEDC&lt;;</span>:?8\<span class="err">&lt;</span>;{z8765.R2r*)(L9
+</code></pre></div></p>
+<p>I recognized it is <a href="../tools and commands/#malbolge">malbolge esolang</a> because I have seen this in some other CTFs. So I ran it in an <a href="https://malbolge.doleczek.pl/">online interpreter</a> for malbolge and got the flag.</p>
+<h2 id="steganography">Steganography<a class="headerlink" href="#steganography" title="Permanent link"></a></h2>
 <h3 id="believe-your-eyes">Believe Your Eyes<a class="headerlink" href="#believe-your-eyes" title="Permanent link"></a></h3>
 <p>Flag: <code class="highlight">flag{849d97fa58871dad45e81027f861739_maYB3_i_SHOULd_BELIeve-7HeM}</code></p>
 <p>In the site for the challenge, I found this image:
@@ -546,6 +619,11 @@
             </article>
           </div>
         </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" data-md-state="hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"/></svg>
+            Back to top
+          </a>
         
       </main>
       
@@ -618,7 +696,7 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.fcfe8b6d.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.top", "navigation.instant"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.fcfe8b6d.min.js", "version": null}</script>
     
     
       <script src="../assets/javascripts/bundle.b1047164.min.js"></script>
