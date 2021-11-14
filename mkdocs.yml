@@ -1,18 +1,33 @@
 site_name: My Writeups
 site_url: https://aman333nolawz.github.io/My-Writeups/
 
+repo_url: https://github.com/aman333nolawz/My-Writeups
+edit_uri: edit/main/docs/src/markdown
+
 docs_dir: docs/src/markdown
 theme:
   name: material
   custom_dir: docs/theme
+
   icon:
     logo: material/book-open-page-variant
     repo: fontawesome/brands/github
 
   palette:
-    scheme: dracula
-    primary: deep purple
-    accent: deep purple
+    - media: "(prefers-color-scheme: dark)"
+      scheme: dracula
+      toggle:
+        icon: material/weather-night
+        name: Switch to light mode
+      primary: deep purple
+      accent: deep purple
+
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to dark mode
+
   font:
     text: Roboto
     code: Fira Code Medium
@@ -53,15 +68,6 @@ markdown_extensions:
           class: arithmatex
           format: !!python/name:pymdownx.arithmatex.fence_mathjax_format
   - pymdownx.highlight:
-      extend_pygments_lang:
-        - name: php-inline
-          lang: php
-          options:
-            startinline: true
-        - name: pycon3
-          lang: pycon
-          options:
-            python3: true
       linenums_style: pymdownx-inline
       guess_lang: true
   - pymdownx.inlinehilite:
