@@ -95,3 +95,7 @@ Hello world in Piet will look like:
 
 If you get binary numbers and you had no luck decoding it, then try this method. I had a similar [challenge](./tfc ctf.md#weird-friend) on a CTF.
 I used https://bahamas10.github.io/binary-to-qrcode/ to translate the binary into QR Code and then decoded it using https://zxing.org/w/decode.jspx
+
+### Mersenne Twister Predictor
+
+If you have a challenge with predicting random number in the python's `random` module try using this tool: https://github.com/kmyk/mersenne-twister-predictor. Python uses Mersenne Twister algorithm for generating random numbers. So this tool will be helpful for that.
