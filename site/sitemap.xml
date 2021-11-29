@@ -2,22 +2,32 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://aman333nolawz.github.io/My-Writeups/</loc>
-         <lastmod>2021-11-14</lastmod>
+         <lastmod>2021-11-27</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://aman333nolawz.github.io/My-Writeups/damncon%20ctf/</loc>
+         <lastmod>2021-11-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://aman333nolawz.github.io/My-Writeups/fweefwop/</loc>
-         <lastmod>2021-11-14</lastmod>
+         <lastmod>2021-11-27</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://aman333nolawz.github.io/My-Writeups/tfc%20ctf/</loc>
+         <lastmod>2021-11-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://aman333nolawz.github.io/My-Writeups/tools%20and%20commands/</loc>
-         <lastmod>2021-11-14</lastmod>
+         <lastmod>2021-11-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://aman333nolawz.github.io/My-Writeups/winja%20ctf/</loc>
-         <lastmod>2021-11-14</lastmod>
+         <lastmod>2021-11-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>

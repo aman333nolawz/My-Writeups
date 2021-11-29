@@ -6,10 +6,12 @@
 
 Flag: `11101000`
 
-???+ info "Description"
-    What is 0xe8 in binary? (use 8 bits)
+```{title="Description"}
+What is 0xe8 in binary? (use 8 bits)
 
 The number given to us is in hex. So we can convert it into binary using python
+```
+
 ```python
 >> f"{0xe8:0b}"
 '11101000'
@@ -19,10 +21,12 @@ The number given to us is in hex. So we can convert it into binary using python
 
 Flag: `SSBsb3ZlIENURgo=`
 
-???+ info "Description"
-    What is the result of base64 encoding of "I love CTF"?
+```{title="Description"}
+What is the result of base64 encoding of "I love CTF"?
 
 We can use the `base64` command for encoding this into base64
+```
+
 ```bash
 echo "I love CTF" | base64
 ```
@@ -31,8 +35,9 @@ echo "I love CTF" | base64
 
 Flag: `fwopCTF{back_from_hex}`
 
-???+ info "Description"
-    66 77 6f 70 43 54 46 7b 62 61 63 6b 5f 66 72 6f 6d 5f 68 65 78 7d
+```{title="Description"}
+66 77 6f 70 43 54 46 7b 62 61 63 6b 5f 66 72 6f 6d 5f 68 65 78 7d
+```
 
 If you have played CTFs before you know this is hex. So just decode it. I ran it in bash using the command called `unhex` and got the output `fwopCTF{back_from_hex}`
 
@@ -44,8 +49,9 @@ unhex 66 77 6f 70 43 54 46 7b 62 61 63 6b 5f 66 72 6f 6d 5f 68 65 78 7d
 
 Flag: `fwopCTF{base64_is_everywhere}`
 
-???+ info "Description"
-    ZndvcENURntiYXNlNjRfaXNfZXZlcnl3aGVyZX0=
+```{title="Description"}
+ZndvcENURntiYXNlNjRfaXNfZXZlcnl3aGVyZX0=
+```
 
 That is clearly base64. We can use the same tool used in [Base64 Abridged](#base64-abridged). To decode the base64 we will need to add a `-d` flag at the end of that tool. And if we run it then we will get the flag `fwopCTF{base64_is_everywhere}`.
 

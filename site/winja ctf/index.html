@@ -476,6 +476,34 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../damncon%20ctf/" class="md-nav__link">
+        Damncon CTF
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tfc%20ctf/" class="md-nav__link">
+        The Few Chosen CTF
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -631,19 +659,19 @@
                 <h1 id="winja-ctf-writeup">Winja CTF Writeup<a class="headerlink" href="#winja-ctf-writeup" title="Permanent link"></a></h1>
 <h2 id="cryptography">Cryptography<a class="headerlink" href="#cryptography" title="Permanent link"></a></h2>
 <h3 id="esoteric">Esoteric<a class="headerlink" href="#esoteric" title="Permanent link"></a></h3>
-<p>Flag: <code class="highlight"><span class="n">flag</span><span class="err">{</span><span class="n">es2o</span><span class="nv">@t</span><span class="err">$</span><span class="n">e4r</span><span class="o">&amp;</span><span class="n">i#c_code</span><span class="o">-</span><span class="n">most_difficult_to_program</span><span class="err">}</span><span class="w"></span></code></p>
+<p>Flag: <code>flag{es2o@t$e4r&amp;i#c_code-most_difficult_to_program}</code></p>
 <p>We were given with the text
-<div class="highlight"><pre><span></span><code>D&#39;`A^?]nIYXWE16Tvus1NpL-KlIH&quot;hgDB{SRba=<span class="err">&lt;</span>)sxqYonsrqj0hPlkdcb(`Hd]#a`_A@VzZY;Qu87MqQP2HlLEiCHG@EDCBA:^!=6543Wx654-Q1qpM&#39;<span class="ni">&amp;+*#G&#39;&amp;}|#z@~}_uts9ZYutslqpi/mlNMiha&#39;_d]ba`_^W{[TYXWVOTSLp32HGLKDhBAF?&gt;b%A:?87[543870T.-2+0)Mnm+</span><span class="nv">$H</span><span class="ni">(hg%</span><span class="cp">${</span><span class="n">zy</span><span class="err">?</span><span class="cp">}</span><span class="ni">_{t:rq7otmrkj0ngledc)JIedcb[!B^]\UyYXWVU7Mqp3INMLEJCgGFE&#39;=</span><span class="nt">&lt;A</span><span class="err">@?8\&lt;;4z2V6/4-Q10po&#39;&amp;%I)(&#39;g%|{&quot;!x</span><span class="nt">&gt;</span><span class="ni">|{zsxwp6tmrqpi/POkjib(fe^F\&quot;`Y^W{&gt;=YXQu8TMLQPOHlLEJCBAeEDC&lt;;</span>:?8\<span class="err">&lt;</span>;{z8765.R2r*)(L9
+<div class="highlight"><pre><span></span><code>D&#39;`A^?]nIYXWE16Tvus1NpL-KlIH&quot;hgDB{SRba=&lt;)sxqYonsrqj0hPlkdcb(`Hd]#a`_A@VzZY;Qu87MqQP2HlLEiCHG@EDCBA:^!=6543Wx654-Q1qpM&#39;&amp;+*#G&#39;&amp;}|#z@~}_uts9ZYutslqpi/mlNMiha&#39;_d]ba`_^W{[TYXWVOTSLp32HGLKDhBAF?&gt;b%A:?87[543870T.-2+0)Mnm+$H(hg%${zy?}_{t:rq7otmrkj0ngledc)JIedcb[!B^]\UyYXWVU7Mqp3INMLEJCgGFE&#39;=&lt;A@?8\&lt;;4z2V6/4-Q10po&#39;&amp;%I)(&#39;g%|{&quot;!x&gt;|{zsxwp6tmrqpi/POkjib(fe^F\&quot;`Y^W{&gt;=YXQu8TMLQPOHlLEJCBAeEDC&lt;;:?8\&lt;;{z8765.R2r*)(L9
 </code></pre></div></p>
 <p>I recognized it is <a href="../tools and commands/#malbolge">malbolge esolang</a> because I have seen this in some other CTFs. So I ran it in an <a href="https://malbolge.doleczek.pl/">online interpreter</a> for malbolge and got the flag.</p>
 <h2 id="steganography">Steganography<a class="headerlink" href="#steganography" title="Permanent link"></a></h2>
 <h3 id="believe-your-eyes">Believe Your Eyes<a class="headerlink" href="#believe-your-eyes" title="Permanent link"></a></h3>
-<p>Flag: <code class="highlight">flag{849d97fa58871dad45e81027f861739_maYB3_i_SHOULd_BELIeve-7HeM}</code></p>
+<p>Flag: <code>flag{849d97fa58871dad45e81027f861739_maYB3_i_SHOULd_BELIeve-7HeM}</code></p>
 <p>In the site for the challenge, I found this image:
 <img alt="Image for the challenge" src="../assets/images/winja%20ctf/believe_your_eyes.jpg" /></p>
-<p>So I ran some basic tools like <code class="highlight">strings</code> and <code class="highlight"><span class="n">exiftool</span></code>. When I inspected results got from the <code class="highlight"><span class="n">exiftool</span></code> I found the flag in the layers like <code class="highlight">flag{849d97fa58871dad4, _SHOULd_BELIeve-7HeM}, 5e81027f861739_maYB3_i</code>. But, they weren't in order so I reordered them and found the flag.</p>
+<p>So I ran some basic tools like <code>strings</code> and <code>exiftool</code>. When I inspected results got from the <code>exiftool</code> I found the flag in the layers like <code>flag{849d97fa58871dad4, _SHOULd_BELIeve-7HeM}, 5e81027f861739_maYB3_i</code>. But, they weren't in order so I reordered them and found the flag.</p>
 <h3 id="hardy">Hardy<a class="headerlink" href="#hardy" title="Permanent link"></a></h3>
-<p>Flag: <code class="highlight">flag{Di77icu8tyI9now@!!#-Youdidit!!}</code></p>
+<p>Flag: <code>flag{Di77icu8tyI9now@!!#-Youdidit!!}</code></p>
 <p><a href="../assets/files/winja%20ctf/hardy.txt">Encoded</a> text given with the challenge</p>
 <p>This one was not so hard. It was just ciphers inside ciphers. Here is the order of the ciphers:</p>
 <ol>
@@ -655,12 +683,12 @@
 <p>And <a href="https://tinyurl.com/3kweb4vx">here</a> is the process in cyberchef.</p>
 <h2 id="forensics">Forensics<a class="headerlink" href="#forensics" title="Permanent link"></a></h2>
 <h3 id="anonymous">Anonymous<a class="headerlink" href="#anonymous" title="Permanent link"></a></h3>
-<p>Flag: <code class="highlight">flag{LJryyYW8IbxuZrOcZ4nd-this-is-a-challenge}</code></p>
-<p>In this challenge, you will get a zip file with someone's desktop files inside. So first i tried to find any suspicious files in the folders of the user <code class="highlight">crazy_crocodile</code>. So first I checked what files are there in the common directories like <code class="highlight">Picture/</code>, <code class="highlight">Documents/</code>, <code class="highlight">Music/</code>, <code class="highlight"><span class="n">Downloads</span><span class="o">/</span></code>, etc. But there wasn't any files in any of those directories. Then I tried to list all of the hidden directories and found <code class="highlight"><span class="na">.config</span><span class="err">/</span></code> directory which contained configuration files for google chrome. So I tried to look for any useful files there and I found the <code class="highlight">History</code> file in the <code class="highlight">Defaults/</code> folder in the google chrome folder. So I tried <code class="highlight">cat History</code> and found a google docs link. I tried visiting the link and tried to submit the title of the file wrapped with <code class="highlight">flag{}</code> as the flag and it was right!</p>
+<p>Flag: <code>flag{LJryyYW8IbxuZrOcZ4nd-this-is-a-challenge}</code></p>
+<p>In this challenge, you will get a zip file with someone's desktop files inside. So first i tried to find any suspicious files in the folders of the user <code>crazy_crocodile</code>. So first I checked what files are there in the common directories like <code>Picture/</code>, <code>Documents/</code>, <code>Music/</code>, <code>Downloads/</code>, etc. But there wasn't any files in any of those directories. Then I tried to list all of the hidden directories and found <code>.config/</code> directory which contained configuration files for google chrome. So I tried to look for any useful files there and I found the <code>History</code> file in the <code>Defaults/</code> folder in the google chrome folder. So I tried <code>cat History</code> and found a google docs link. I tried visiting the link and tried to submit the title of the file wrapped with <code>flag{}</code> as the flag and it was right!</p>
 <h2 id="web">Web<a class="headerlink" href="#web" title="Permanent link"></a></h2>
 <h3 id="b74ass">b74ass<a class="headerlink" href="#b74ass" title="Permanent link"></a></h3>
-<p>Flag: <code class="highlight"><span class="n">flag</span><span class="err">{</span><span class="n">D</span><span class="nv">@i7s</span><span class="n">#o89</span><span class="err">!</span><span class="mi">0</span><span class="nv">@v</span><span class="o">&amp;</span><span class="n">e</span><span class="nv">@_php_master</span><span class="err">}</span><span class="w"></span></code></p>
-<p>I poked around the website for some times and found that if we supply <code class="highlight">?debug</code> in the URL, we would get the source code of the project. And there I found that we need to make the variable <code class="highlight">final_string</code> to <code class="highlight">roseytherehappy</code> in order to get the flag. But, the PHP code removes every occurrence of <code class="highlight">roseytherehappy</code> with function <code class="highlight"><span class="n">preg_replace</span></code>. So how do we solve it? Well, the <code class="highlight"><span class="n">preg_replace</span></code> replaces exact word with nothing. So we could insert a <code class="highlight">roseytherehappy</code> inside any of the letters in the <code class="highlight">roseytherehappy</code> and it will replace it, and we will get the <code class="highlight">roseytherehappy</code> as value. So the payload will look like <code class="highlight">roseytherehapproseytherehappyy</code>. And the final URL will look like: <a href="https://jerry.winja.site/?value=roseytherehapproseytherehappyy">https://jerry.winja.site/?value=roseytherehapproseytherehappyy</a></p>
+<p>Flag: <code>flag{D@i7s#o89!0@v&amp;e@_php_master}</code></p>
+<p>I poked around the website for some times and found that if we supply <code>?debug</code> in the URL, we would get the source code of the project. And there I found that we need to make the variable <code>final_string</code> to <code>roseytherehappy</code> in order to get the flag. But, the PHP code removes every occurrence of <code>roseytherehappy</code> with function <code>preg_replace</code>. So how do we solve it? Well, the <code>preg_replace</code> replaces exact word with nothing. So we could insert a <code>roseytherehappy</code> inside any of the letters in the <code>roseytherehappy</code> and it will replace it, and we will get the <code>roseytherehappy</code> as value. So the payload will look like <code>roseytherehapproseytherehappyy</code>. And the final URL will look like: <a href="https://jerry.winja.site/?value=roseytherehapproseytherehappyy">https://jerry.winja.site/?value=roseytherehapproseytherehappyy</a></p>
                 
               
               
@@ -701,13 +729,13 @@
       
       
         
-        <a href="../tools%20and%20commands/" class="md-footer__link md-footer__link--next" aria-label="Next: Tools and Commands" rel="next">
+        <a href="../damncon%20ctf/" class="md-footer__link md-footer__link--next" aria-label="Next: Damncon CTF" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Tools and Commands
+              Damncon CTF
             </div>
           </div>
           <div class="md-footer__button md-icon">

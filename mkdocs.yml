@@ -42,6 +42,8 @@ nav:
   - CTFs:
     - Fweefwop CTF: fweefwop.md
     - Winja CTF: winja ctf.md
+    - Damncon CTF: damncon ctf.md
+    - The Few Chosen CTF: tfc ctf.md
   - Tools and Commands: tools and commands.md
 
 plugins:
@@ -69,7 +71,7 @@ markdown_extensions:
           format: !!python/name:pymdownx.arithmatex.fence_mathjax_format
   - pymdownx.highlight:
       linenums_style: pymdownx-inline
-      guess_lang: true
+      guess_lang: false
   - pymdownx.inlinehilite:
       custom_inline:
         - name: math

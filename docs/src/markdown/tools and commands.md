@@ -2,7 +2,6 @@
 
 This is a listing of tools and commands that may help with CTF challenges.
 
-
 ## Crypto
 
 ### Caesar Cipher
@@ -14,7 +13,7 @@ Caesar Cipher is one of the simplest and most widely known encryption techniques
 
 ### Rot13
 
-ROT13 ("rotate by 13 places", sometimes hyphenated ROT-13) is a simple letter substitution cipher that replaces a letter with the 13th letter after it in the alphabet. This is same as doing caesar cipher with 13 as the key. There are multiple variants for this like: `rot47`, `rot5`. 
+ROT13 ("rotate by 13 places", sometimes hyphenated ROT-13) is a simple letter substitution cipher that replaces a letter with the 13th letter after it in the alphabet. This is same as doing caesar cipher with 13 as the key. There are multiple variants for this like: `rot47`, `rot5`.
 [More Info](https://en.wikipedia.org/wiki/ROT13)
 
 ### Rot47
@@ -33,6 +32,16 @@ A maritime flag is a flag designated for use on ships, boats, and other watercra
 The encryption composed of birds represented as perched on an electric wire is in fact an alphabet of substitution by drawings (of the birds). Each bird represents a letter of the Latin alphabet (26 letters from A to Z) according to the correspondence. Here is a [decoder](https://www.dcode.fr/birds-on-a-wire-cipher).
 ![Birds on wirde cipher](https://www.geocachingtoolbox.com/pages/codeTables/birdsOnAWire.png "Birds on wire")
 
+### Twitter Secret Message
+
+Sometimes you will get messages looking like this for CTFs:
+
+```
+Ｉ dｏn't ｔｈｉnk ｓο ｅⅰtｈeｒ. Τｈey ｓhｏuｌｄ worｋ ｈａrdeｒ foｒ ｔｈese ｆlａｇｓ！ Ｗｈｅｎ I wａs tｈeіr age, Ｉ had tｏ tｒaνeｌ tｈοusａnｄｓ οｆ milｅｓ to get them!
+```
+
+If you don't know what these are, these are Twitter secret messages. You could use an online tool like https://injecti0n.github.io/tweet-hidden-message/ to solve these kind of challenges.
+
 ## Miscellaneous
 
 ### Esoteric Languages
@@ -46,14 +55,15 @@ Brainfuck is an esoteric programming language created in 1993 by Urban Müller.
 Notable for its extreme minimalism, the language consists of only eight simple commands, a data pointer and an instruction pointer. While it is fully Turing complete, it is not intended for practical use, but to challenge and amuse programmers. Brainfuck simply requires one to break commands into microscopic steps. It's common to use brainfuck in CTF challenges.
 
 Hello world in brainfuck will look like:
+
 ```brainf
 >++++++++[<+++++++++>-]<.>++++[<+++++++>-]<+.+++++++..+++.>>++++++[<+++++++>-]<+
 +.------------.>++++++[<+++++++++>-]<+.<.+++.------.--------.>>>++++[<++++++++>-
 ]<+.
 ```
 
-* [More Info](https://en.wikipedia.org/wiki/Brainfuck)
-* [Interpreter](https://tio.run/#brainfuck)
+- [More Info](https://en.wikipedia.org/wiki/Brainfuck)
+- [Interpreter](https://tio.run/#brainfuck)
 
 #### Malbolge
 
@@ -62,12 +72,13 @@ Malbolge is a public domain esoteric programming language invented by Ben Olmste
 It's common to misunderstand malbolge as `base85` or [rot47](#rot47)
 
 Hello world in malbolge will look like:
+
 ```malbolge
  (=<`#9]~6ZY32Vx/4Rs+0No-&Jk)"Fh}|Bcy?`=*z]Kw%oG4UUS0/@-ejc(:'8dc
 ```
 
-* [More Info](https://en.wikipedia.org/wiki/Malbolge)
-* [Interpreter](https://malbolge.doleczek.pl/)
+- [More Info](https://en.wikipedia.org/wiki/Malbolge)
+- [Interpreter](https://malbolge.doleczek.pl/)
 
 #### Piet
 
@@ -77,7 +88,10 @@ Hello world in Piet will look like:
 
 ![Hello world in Piet](https://esolangs.org/w/images/6/63/Piet_Hello_World.gif "Hello world in Piet")
 
-* [More Info](https://esolangs.org/wiki/Piet)
-* [Interpreter](https://www.bertnase.de/npiet/npiet-execute.php)
+- [More Info](https://esolangs.org/wiki/Piet)
+- [Interpreter](https://www.bertnase.de/npiet/npiet-execute.php)
 
+### Binary to QR Code
 
+If you get binary numbers and you had no luck decoding it, then try this method. I had a similar [challenge](./tfc ctf.md#weird-friend) on a CTF.
+I used https://bahamas10.github.io/binary-to-qrcode/ to translate the binary into QR Code and then decoded it using https://zxing.org/w/decode.jspx
