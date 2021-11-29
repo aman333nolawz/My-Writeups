@@ -471,6 +471,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#twitter-secret-message" class="md-nav__link">
+    Twitter Secret Message
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -515,6 +522,13 @@
         
       </ul>
     </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#binary-to-qr-code" class="md-nav__link">
+    Binary to QR Code
+  </a>
   
 </li>
         
@@ -601,6 +615,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#twitter-secret-message" class="md-nav__link">
+    Twitter Secret Message
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -648,6 +669,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#binary-to-qr-code" class="md-nav__link">
+    Binary to QR Code
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -678,7 +706,7 @@
 <a href="https://en.wikipedia.org/wiki/Caesar_cipher">More Info</a></p>
 <p><img alt="Caesar Cipher" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Caesar_cipher_left_shift_of_3.svg/1280px-Caesar_cipher_left_shift_of_3.svg.png" title="Caesar Cipher" /></p>
 <h3 id="rot13">Rot13<a class="headerlink" href="#rot13" title="Permanent link"></a></h3>
-<p>ROT13 ("rotate by 13 places", sometimes hyphenated ROT-13) is a simple letter substitution cipher that replaces a letter with the 13<sup>th</sup> letter after it in the alphabet. This is same as doing caesar cipher with 13 as the key. There are multiple variants for this like: <code>rot47</code>, <code>rot5</code>. 
+<p>ROT13 ("rotate by 13 places", sometimes hyphenated ROT-13) is a simple letter substitution cipher that replaces a letter with the 13<sup>th</sup> letter after it in the alphabet. This is same as doing caesar cipher with 13 as the key. There are multiple variants for this like: <code>rot47</code>, <code>rot5</code>.
 <a href="https://en.wikipedia.org/wiki/ROT13">More Info</a></p>
 <h3 id="rot47">Rot47<a class="headerlink" href="#rot47" title="Permanent link"></a></h3>
 <p>ROT47 is a derivative of ROT13 which, in addition to scrambling the basic letters, treats numbers and common symbols. Instead of using the sequence A–Z as the alphabet, ROT47 uses a larger set of characters from the common character encoding known as ASCII. Specifically, the 7-bit printable characters, excluding space, from decimal 33 '!' through 126 '~', 94 in total, taken in the order of the numerical values of their ASCII codes, are rotated by 47 positions, without special consideration of case. For example, the character A is mapped to p, while a is mapped to 2. The use of a larger alphabet produces a more thorough obfuscation than that of ROT13.
@@ -690,17 +718,22 @@ Here is a <a href="https://www.dcode.fr/rot-47-cipher">decoder</a> for Rot47</p>
 <h3 id="birds-on-wire">Birds on wire<a class="headerlink" href="#birds-on-wire" title="Permanent link"></a></h3>
 <p>The encryption composed of birds represented as perched on an electric wire is in fact an alphabet of substitution by drawings (of the birds). Each bird represents a letter of the Latin alphabet (26 letters from A to Z) according to the correspondence. Here is a <a href="https://www.dcode.fr/birds-on-a-wire-cipher">decoder</a>.
 <img alt="Birds on wirde cipher" src="https://www.geocachingtoolbox.com/pages/codeTables/birdsOnAWire.png" title="Birds on wire" /></p>
+<h3 id="twitter-secret-message">Twitter Secret Message<a class="headerlink" href="#twitter-secret-message" title="Permanent link"></a></h3>
+<p>Sometimes you will get messages looking like this for CTFs:</p>
+<div class="highlight"><pre><span></span><code>Ｉ dｏn&#39;t ｔｈｉnk ｓο ｅⅰtｈeｒ. Τｈey ｓhｏuｌｄ worｋ ｈａrdeｒ foｒ ｔｈese ｆlａｇｓ！ Ｗｈｅｎ I wａs tｈeіr age, Ｉ had tｏ tｒaνeｌ tｈοusａnｄｓ οｆ milｅｓ to get them!
+</code></pre></div>
+<p>If you don't know what these are, these are Twitter secret messages. You could use an online tool like <a href="https://injecti0n.github.io/tweet-hidden-message/">https://injecti0n.github.io/tweet-hidden-message/</a> to solve these kind of challenges.</p>
 <h2 id="miscellaneous">Miscellaneous<a class="headerlink" href="#miscellaneous" title="Permanent link"></a></h2>
 <h3 id="esoteric-languages">Esoteric Languages<a class="headerlink" href="#esoteric-languages" title="Permanent link"></a></h3>
 <p>Some of the most used esoteric languages are here. For more of them you can visit <a href="https://esolangs.org/">esolangs.org</a> or view the list of some esolangs <a href="https://en.wikipedia.org/wiki/Esoteric_programming_language">here</a>. And for a place to run these esoteric languages you can try <a href="https://tio.run/">tio.run</a></p>
 <h4 id="brainfuck">Brainfuck<a class="headerlink" href="#brainfuck" title="Permanent link"></a></h4>
 <p>Brainfuck is an esoteric programming language created in 1993 by Urban Müller.</p>
 <p>Notable for its extreme minimalism, the language consists of only eight simple commands, a data pointer and an instruction pointer. While it is fully Turing complete, it is not intended for practical use, but to challenge and amuse programmers. Brainfuck simply requires one to break commands into microscopic steps. It's common to use brainfuck in CTF challenges.</p>
-<p>Hello world in brainfuck will look like:
+<p>Hello world in brainfuck will look like:</p>
 <div class="highlight"><pre><span></span><code>&gt;++++++++[&lt;+++++++++&gt;-]&lt;.&gt;++++[&lt;+++++++&gt;-]&lt;+.+++++++..+++.&gt;&gt;++++++[&lt;+++++++&gt;-]&lt;+
 +.------------.&gt;++++++[&lt;+++++++++&gt;-]&lt;+.&lt;.+++.------.--------.&gt;&gt;&gt;++++[&lt;++++++++&gt;-
 ]&lt;+.
-</code></pre></div></p>
+</code></pre></div>
 <ul>
 <li><a href="https://en.wikipedia.org/wiki/Brainfuck">More Info</a></li>
 <li><a href="https://tio.run/#brainfuck">Interpreter</a></li>
@@ -708,9 +741,9 @@ Here is a <a href="https://www.dcode.fr/rot-47-cipher">decoder</a> for Rot47</p>
 <h4 id="malbolge">Malbolge<a class="headerlink" href="#malbolge" title="Permanent link"></a></h4>
 <p>Malbolge is a public domain esoteric programming language invented by Ben Olmstead in 1998, named after the eighth circle of hell in Dante's Inferno, the Malebolge. It was specifically designed to be almost impossible to use, via a counter-intuitive 'crazy operation', base-three arithmetic, and self-altering code.</p>
 <p>It's common to misunderstand malbolge as <code>base85</code> or <a href="#rot47">rot47</a></p>
-<p>Hello world in malbolge will look like:
+<p>Hello world in malbolge will look like:</p>
 <div class="highlight"><pre><span></span><code> (=&lt;`#9]~6ZY32Vx/4Rs+0No-&amp;Jk)&quot;Fh}|Bcy?`=*z]Kw%oG4UUS0/@-ejc(:&#39;8dc
-</code></pre></div></p>
+</code></pre></div>
 <ul>
 <li><a href="https://en.wikipedia.org/wiki/Malbolge">More Info</a></li>
 <li><a href="https://malbolge.doleczek.pl/">Interpreter</a></li>
@@ -723,6 +756,9 @@ Here is a <a href="https://www.dcode.fr/rot-47-cipher">decoder</a> for Rot47</p>
 <li><a href="https://esolangs.org/wiki/Piet">More Info</a></li>
 <li><a href="https://www.bertnase.de/npiet/npiet-execute.php">Interpreter</a></li>
 </ul>
+<h3 id="binary-to-qr-code">Binary to QR Code<a class="headerlink" href="#binary-to-qr-code" title="Permanent link"></a></h3>
+<p>If you get binary numbers and you had no luck decoding it, then try this method. I had a similar <a href="../tfc%20ctf/#weird-friend">challenge</a> on a CTF.
+I used <a href="https://bahamas10.github.io/binary-to-qrcode/">https://bahamas10.github.io/binary-to-qrcode/</a> to translate the binary into QR Code and then decoded it using <a href="https://zxing.org/w/decode.jspx">https://zxing.org/w/decode.jspx</a></p>
                 
               
               
