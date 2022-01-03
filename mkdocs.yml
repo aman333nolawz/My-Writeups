@@ -44,6 +44,7 @@ nav:
     - Winja CTF: winja ctf.md
     - Damncon CTF: damncon ctf.md
     - The Few Chosen CTF: tfc ctf.md
+    - INCTFJ 2021: inctfj.md
   - Tools and Commands: tools and commands.md
 
 plugins:
