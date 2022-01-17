@@ -45,7 +45,10 @@ nav:
     - Damncon CTF: damncon ctf.md
     - The Few Chosen CTF: tfc ctf.md
     - INCTFJ 2021: inctfj.md
-  - Tools and Commands: tools and commands.md
+  - Tools and Commands:
+    - Crypto: tools and commands/crypto.md
+    - Forensics: tools and commands/forensics.md
+    - Miscellaneous: tools and commands/misc.md
 
 plugins:
   - search
