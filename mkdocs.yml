@@ -39,12 +39,14 @@ theme:
 
 nav:
   - Home: index.md
-  - CTFs:
+  - CTFs & War Games:
     - Fweefwop CTF: fweefwop.md
     - Winja CTF: winja ctf.md
     - Damncon CTF: damncon ctf.md
     - The Few Chosen CTF: tfc ctf.md
     - INCTFJ 2021: inctfj.md
+    - VulnHub:
+        - ICA 1: vulnhub/ica1.md
   - Tools and Commands:
     - Crypto: tools and commands/crypto.md
     - Forensics: tools and commands/forensics.md
